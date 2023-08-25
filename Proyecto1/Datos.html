@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabla de Usuarios Registrados</title>
+    <style>
+        /* Los estilos y CSS aquí */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Usuarios Registrados</h2>
+            <table id="user-table">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Correo Electrónico</th>
+                    <th>Teléfono</th>
+                    <th>Usuario</th>
+                </tr>
+                <!-- Los datos de los usuarios registrados se llenarán aquí usando JavaScript -->
+            </table>
+        </div>
+    </div>
+    
+    <script>
+        // Código JavaScript para llenar la tabla con datos aquí
+        const userTable = document.getElementById("user-table");
+
+        // Ejemplo de cómo agregar filas a la tabla
+        const userData = [
+            ["John", "Doe", "john@example.com", "1234567890", "johndoe"],
+            ["Jane", "Smith", "jane@example.com", "9876543210", "janesmith"]
+        ];
+
+        userData.forEach(function(data) {
+            const newRow = userTable.insertRow(userTable.rows.length);
+            data.forEach(function(value) {
+                const cell = newRow.insertCell();
+                cell.textContent = value;
+            });
+        });
+    </script>
+</body>
+</html>

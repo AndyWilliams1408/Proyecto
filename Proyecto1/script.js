@@ -35,13 +35,7 @@ const fundacionList = document.getElementById("fundacionList");
 
 clientSelect.addEventListener('change', function() {
         var selectedClient = clientSelect.value;
-    
-    if (selectedClient === 'op1') {
-        console.log("Hola")
-        alert('Seleccione un cliente antes de agregarlo a la tabla.');
-        return; // Detener la ejecución si no se ha seleccionado un cliente válido
-    }
- })
+     })
 
     function actualizarCupo() { 
    

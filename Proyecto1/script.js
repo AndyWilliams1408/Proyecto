@@ -47,6 +47,10 @@ clientSelect.addEventListener('change', function() {
     const empleado = document.getElementById("empleado").value;
     const cliente = document.getElementById("clientSelect").value;
     
+    if (cliente == "op1") {
+        alert("Por favor, seleccione un cliente válido.");
+        return; // Detiene la ejecución si el cliente no es válido
+    }
     // actualización de cupo 
     totalValue -= valorAnterior; // Resta el valor anterior
     totalValue += valorActual;    // Suma el valor actual

@@ -7,39 +7,50 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="form-container">
-            <h2>Usuarios Registrados</h2>
-            <table id="user-table">
+    <div id="versionamiento">
+        <h2>Versionamiento de Transacciones</h2>
+        <table>
+            <thead>
                 <tr>
                     <th>Nombre</th>
                     <th>Apellido</th>
-                    <th>Correo Electrónico</th>
-                    <th>Teléfono</th>
+                    <th>Correo</th>
+                    <th>Telefono</th>
                     <th>Usuario</th>
                 </tr>
-                <!-- Los datos de los usuarios registrados se llenarán aquí usando JavaScript -->
-            </table>
-        </div>
+            </thead>
+            <tbody id="transaccionesTableBody">
+                <!-- Aquí va la tabla de transacciones -->
+            </tbody>
+        </table>
     </div>
+    <script src="usuarios.html">
+    let totalValue = 0;
+
+    function sign() {
+        const fecha = document.getElementById("nombre").value;
+        const hora = document.getElementById("apellido").value;
+        const valor = document.getElementById("correo").value;
+        const recibe = parseFloat(document.getElementById("telefono").value);
+        const pagoPor = document.getElementById("usuario").value;
+
     
-    <script>
-        // Código JavaScript para llenar la tabla con datos aquí
-        const userTable = document.getElementById("user-table");
-
-        // Ejemplo de cómo agregar filas a la tabla
-        const userData = [
-            ["John", "Doe", "john@example.com", "1234567890", "johndoe"],
-            ["Jane", "Smith", "jane@example.com", "9876543210", "janesmith"]
-        ];
-
-        userData.forEach(function(data) {
-            const newRow = userTable.insertRow(userTable.rows.length);
-            data.forEach(function(value) {
-                const cell = newRow.insertCell();
-                cell.textContent = value;
-            });
-        });
-    </script>
+        // registro de cupo
+    
+        totalValue += valor;
+        document.getElementById("totalValue").textContent = totalValue;
+        const newRow = transaccionesTableBody.insertRow();
+        newRow.insertCell().textContent = fecha;
+        newRow.insertCell().textContent = hora;
+        newRow.insertCell().textContent = valor;
+        newRow.insertCell().textContent = recibe;
+        newRow.insertCell().textContent = pagoPor;
+    
+ 
+    }
+    
+    const transaccionesTableBody = document.getElementById("transaccionesTableBody");
+</script>
+    <a src="usuarios.html"></a>
 </body>
 </html>

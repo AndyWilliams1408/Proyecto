@@ -1,67 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login y Sign Up</title>
-    <style>
-        /* Los estilos y CSS aquí */
-    </style>
+    <title>Gestion de Pagos</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
 </head>
 <body>
-    <div class="container">
-        <div class="form-container">
-            <h2>Login y Sign Up</h2>
-            <button id="toggle-login">Login</button>
-            <button id="toggle-signup">Sign Up</button>
+    <h1>Gestion de los Pagos</h1>
 
-            <form id="login-form">
-                <label for="login-username">Usuario:</label>
-                <input type="text" id="login-username" required><br>
-                
-                <label for="login-password">Contraseña:</label>
-                <input type="password" id="login-password" required><br>
-                
-                <button type="submit">Iniciar Sesión</button>
-            </form>
+    <div id="ingresoCupo">
+        <h2>Ingreso de Cupo</h2>
+        <form id="ingresoForm">
+            <label for="Nombre">Nombre</label>
+            <input type="text" id="nombre" required><br>
+
+            <label for="Apellido">Apellido:</label>
+            <input type="text" id="apellido" required><br>
+
+            <label for="Correp">Correo electrónico:</label>
+            <input type="text" id="correo" required><br>
+
+            <label for="Telefono">Telefono:</label>
+            <input type="number" id="telefono" required><br>
+
+            <label for="Usuario">Usuario:</label>
+            <input type="text" id="usuario" required><br>
+
+            <button type="button" onclick="sign()">Sign up</button>
+
             
-            <form id="signup-form">
-                <label for="signup-username">Usuario:</label>
-                <input type="text" id="signup-username" required><br>
-                
-                <label for="signup-password">Contraseña:</label>
-                <input type="password" id="signup-password" required><br>
-
-                <label for="signup-name">Nombre:</label>
-                <input type="text" id="signup-name" required><br>
-
-                <label for="signup-lastname">Apellido:</label>
-                <input type="text" id="signup-lastname" required><br>
-
-                <label for="signup-email">Correo Electrónico:</label>
-                <input type="email" id="signup-email" required><br>
-
-                <label for="signup-phone">Teléfono:</label>
-                <input type="tel" id="signup-phone" required><br>
-                
-                <button type="submit">Registrarse</button>
-            </form>
-        </div>
+        </form>
     </div>
-    
-    <script>
-        const toggleLogin = document.getElementById("toggle-login");
-        const toggleSignup = document.getElementById("toggle-signup");
-        const loginForm = document.getElementById("login-form");
-        const signupForm = document.getElementById("signup-form");
-
-        toggleLogin.addEventListener("click", function() {
-            loginForm.style.display = "block";
-            signupForm.style.display = "none";
-        });
-
-        toggleSignup.addEventListener("click", function() {
-            signupForm.style.display = "block";
-            loginForm.style.display = "none";
-        });
-    </script>
+    <a src="Datos.html"></a>
 </body>
 </html>
